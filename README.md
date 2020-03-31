@@ -36,11 +36,15 @@
 
 四、vue相关命名
 ```
-  * vue文件命名（多个单词）采用pascal法，除了index.vue,例如：Home.vue、LoginHome.vue
+  * vue文件命名（多个单词）采用中划线命名法，除了index.vue,例如：address-edit.vue
 
   * data中变量定义使用camel命名法，例如：listData
 
-  * 组件必须使用pascal命名，重用组件推荐以Item结尾，例如：NameCardItem
+  * 组件必须使用中划线命名，重用组件推荐以Item结尾，例如：name-card-item
+
+  * 引入组件必须使用驼峰命名，如: import nameCardItem from 'name-card-item'
+
+  * 使用组件必须使用中划线标签，如<name-card-item></name-card-item>
 
   * store中state/getters/action使用camel命名法，例如getWeiXinData
 
