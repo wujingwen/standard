@@ -47,9 +47,9 @@
 
   * 组件必须使用中划线命名，重用组件推荐以Item结尾，例如：name-card-item
 
-  * 引入组件必须使用Pascal命名，如: import NameCardItem from 'name-card-item'
+  * 引入组件必须使用Pascal命名，如: import NameCardItem from 'NameCardItem'
 
-  * 使用组件必须使用中划线标签，如<name-card-item></name-card-item>
+  * 使用自定义组件必须使用Pascal标签，如<NameCardItem></NameCardItem>，用以区分自定义组件以及第三方UI库组件
 
   * store中state/getters/action使用驼峰命名法，例如getWeiXinData
 
