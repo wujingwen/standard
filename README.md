@@ -17,7 +17,8 @@
 
 一、 文件目录命名
 ```
-  * 目录命名（多个单词）采用中划线法，例如：top-nav
+  * 通常目录命名（多个单词）采用中划线法，例如：@views/error-pages
+  * components目录下采用Pascal命名法，例如：@/components/DragSelect
 ```
 
 二、 html命名
@@ -27,26 +28,30 @@
 
 三、css命名
 ```
-  * css文件命名（多个单词）采用中划线法，例如：input;
+  * css文件命名（多个单词）采用中划线法，例如：@/styles/element-variables;
 
   * class命名采用BEM规范，block__element--modifier，通常每个类名中element只会出现一次，不可出现多个，如button__primary--success;
+
+  * BEM命名法最多只能出现两层，如home__banner，不可出现如home__banner__img
 
   * 单个block或element的命名可使用中划线，如submit-button__primary--success
 ```
 
 四、vue相关命名
 ```
-  * vue文件命名（多个单词）采用中划线命名法，除了index.vue,例如：address-edit.vue
+  * vue文件命名（多个单词）在view级文件上采用中划线命名法，除了index.vue,例如：address-edit.vue
 
-  * data中变量定义使用camel命名法，例如：listData
+  * vue文件命名（多个单词）在组件级文件上采用中Pascal命名法，例如：KeyBoard.vue
+
+  * data中变量定义使用驼峰命名法，例如：listData
 
   * 组件必须使用中划线命名，重用组件推荐以Item结尾，例如：name-card-item
 
-  * 引入组件必须使用驼峰命名，如: import nameCardItem from 'name-card-item'
+  * 引入组件必须使用Pascal命名，如: import NameCardItem from 'name-card-item'
 
   * 使用组件必须使用中划线标签，如<name-card-item></name-card-item>
 
-  * store中state/getters/action使用camel命名法，例如getWeiXinData
+  * store中state/getters/action使用驼峰命名法，例如getWeiXinData
 
   * store中mutation中使用全部大写的下划线命名法，例如：SET_TITLE
 
@@ -54,7 +59,7 @@
 
   * axios方法以get、post、fetch开头，并根据后端接口名命名，例如：后端接口：/api/news_list 即可定义名称  为: fetchNewsList
 
-  * methods方法中推荐使用set、get、open、close、jump、load等开始动词,并且必须camel命名,例如：initPage () {}，若方法由用户手动触发，则必须以handle开头，如handleClick
+  * methods方法中推荐使用set、get、open、close、jump、load等开始动词,并且必须驼峰命名,例如：initPage () {}，若方法由用户手动触发，则必须以handle开头，如handleClick
 
   * data数据中带有判断性质的变量必须使用is（是否）、has（是否含有）、can（是否能够）等动词命名，例如：isShowPopup
 
@@ -62,7 +67,7 @@
 
   * 定义props参数必须使用props验证形式，例如：name {type: String | Number, default: 'Ivan'}
 
-  * router路由中路径名称必须使用下划线命名法，例如：public_home
+  * router路由中路径名称必须使用中划线命名法，例如：public-home
 ```
 
 五、图片命名
@@ -81,17 +86,11 @@
 ```javascript
  <!-- ============== 这是注释 ============== -->
 ```
-```
-  html的class全部采用BEM命名规范，每个block必须用以上模板进行注释，并且空行处理
-```
 
 二、css注释
 
 ```javascript
  /* 这是块状注释 */
-```
-```
-  class全部采用BEM命名规范，每个block必须用以上模板进行注释
 ```
 
 三、js注释
